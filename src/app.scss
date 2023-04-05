@@ -1,8 +1,13 @@
-/* Possible secundary color: #ff5555*/
 body {
-  background-color: #181818;
+  background-color: $background_color;
   color: white;
 
   font-size: 175%;
   font-family: "Hack Nerd Font";
+}
+
+hr {
+  border-color: $secondary_red_color;
+
+  box-shadow: 0 0 10px $secondary_red_color;
 }

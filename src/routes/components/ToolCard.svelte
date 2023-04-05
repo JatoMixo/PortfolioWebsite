@@ -13,10 +13,17 @@
   }
 
   div {
+    /* ANIMATION */
+    :hover {
+      animation-name: on_hover;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
     /* BORDER */
-    border: solid 5px #ff5555;
+    border: solid 5px $secondary_red_color;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ff5555;
+    box-shadow: 0 0 10px $secondary_red_color;
 
     /* SIZE */
     width: 10%;
@@ -30,19 +37,12 @@
 
     /* IMAGE INSIDE */
     img {
-      position: relative;
-
       display: block;
       margin-left: auto;
       margin-right: auto;
 
       height: 100%;
       width: 100%;
-    }
-
-    :hover {
-      animation-name: on_hover;
-      animation-duration: 0.5s;
     }
   }
 
