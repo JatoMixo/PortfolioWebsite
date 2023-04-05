@@ -14,7 +14,9 @@
 
   div {
     /* ANIMATION */
-    :hover {
+    :hover > * {
+      position: relative;
+
       animation-name: on_hover;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
