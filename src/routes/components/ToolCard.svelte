@@ -9,11 +9,6 @@
 
   $default_box_width: 10%;
 
-  @keyframes on_hover {
-    0% {top: 0px}
-    100% {top: -25px}
-  }
-
   .box {
     width: fit-content;
     height: fit-content;
@@ -26,14 +21,13 @@
 
   .animation {
     width: $default_box_width;
+
+    transform: translateY(0px);
+    transition: transform 0.5s ease;
   }
 
   .animation:hover {
-    position: relative;
-
-    animation-name: on_hover;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    transform: translateY(-25px);
   }
 
   a {
@@ -50,22 +44,6 @@
     font-size: 28px;
   }
 </style>
-
-<!--{#if link != ""}
-<div>
-  <a href={link}>
-    <img src={image} alt="Didn't load"/>
-    <h1>{name}</h1>
-    <p>{description}</p>
-  </a>
-</div>
-{:else}
-  <div>
-    <img src={image} alt="Didn't load"/>
-    <h1>{name}</h1>
-    <p>{description}</p>
-  </div>
-{/if}-->
 
 {#if link == ""}
 <div class="animation">
