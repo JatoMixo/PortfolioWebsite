@@ -14,7 +14,6 @@
 
     img {
       width: 60%;
-      transform: translateY(7.5%);
     }
 
     h1 {
@@ -36,4 +35,6 @@
 <hr>
 
 <!--About-->
+<h1>About</h1>
 
+<ToolCard img="" link="" description="Something." name="Something"/>

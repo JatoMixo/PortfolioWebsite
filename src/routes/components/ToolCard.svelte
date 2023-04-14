@@ -42,10 +42,12 @@
   h1 {
     text-align: center;
     font-size: 28px;
+
+    text-shadow: 0 0 3px white;
   }
 </style>
 
-{#if link == ""}
+<!--{#if link == ""}
 <div class="animation">
   <div class="box">
     <img src={image} alt="Didn't load"/>
@@ -63,4 +65,14 @@
     </div>
   </a>
 </div>
-{/if}
+{/if}-->
+
+<div class="animation">
+  <a href={link}>
+    <div class="box">
+      <img src={image} alt="Didn't load"/>
+      <h1>{name}</h1>
+      <p>{description}</p>
+    </div>
+  </a>
+</div>
