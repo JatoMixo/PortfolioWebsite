@@ -2,7 +2,6 @@
   export let name = "";
   export let image = "";
   export let description = "";
-  export let link = "";
 </script>
 
 <style lang="scss">
@@ -28,11 +27,6 @@
 
   .animation:hover {
     transform: translateY(-25px);
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
   }
 
   p {
@@ -68,11 +62,9 @@
 {/if}-->
 
 <div class="animation">
-  <a href={link}>
-    <div class="box">
-      <img src={image} alt="Didn't load"/>
-      <h1>{name}</h1>
-      <p>{description}</p>
-    </div>
-  </a>
+  <div class="box">
+    <img src={image} alt="Didn't load"/>
+    <h1>{name}</h1>
+    <p>{description}</p>
+  </div>
 </div>

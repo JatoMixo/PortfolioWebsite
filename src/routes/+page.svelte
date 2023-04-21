@@ -37,4 +37,4 @@
 <!--About-->
 <h1>About</h1>
 
-<ToolCard img="" link="" description="Something." name="Something"/>
+<ToolCard img="" description="Something." name="Something"/>
