@@ -4,6 +4,8 @@ body {
 
   font-size: 175%;
   font-family: "Hack Nerd Font";
+
+  scroll-behavior: smooth;
 }
 
 hr {
@@ -36,4 +38,8 @@ hr {
 
 h1 {
   text-shadow: 0 0 4px white;
+}
+
+p {
+  text-shadow: 0 0 4px;
 }

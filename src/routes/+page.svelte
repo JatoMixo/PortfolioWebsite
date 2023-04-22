@@ -1,9 +1,18 @@
 <script>
   import ToolCard from "./components/ToolCard.svelte";
+  import Terminal from "./components/Terminal.svelte";
   import JatoMixoLogo from "./images/jatomixo/jatomixo_logo.png";
 </script>
 
 <style lang="scss">
+  @keyframes flash-animation {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
   .logo {
     transform-origin: center;
     justify-content: center;
@@ -14,6 +23,9 @@
 
     img {
       width: 60%;
+
+      animation-name: flash-animation;
+      animation-duration: 500ms;
     }
 
     h1 {
@@ -38,3 +50,7 @@
 <h1>About</h1>
 
 <ToolCard img="" description="Something." name="Something"/>
+
+<hr>
+
+<Terminal default_text="Type something good please"/>
