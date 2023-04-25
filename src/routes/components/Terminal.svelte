@@ -57,6 +57,7 @@
       background-color: $secondary_background_color;
 
       text-shadow: 0 0 3px;
+      text-decoration: none;
 
       outline: none;
     }
@@ -97,6 +98,6 @@
   {/each}
   <div class="row">
     <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
-    <input type="text" bind:value={command} bind:this={commandInputField}>
+    <input spellcheck="false" bind:value={command} bind:this={commandInputField}>
   </div>
 </div>
