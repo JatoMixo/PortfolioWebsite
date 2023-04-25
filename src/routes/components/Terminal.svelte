@@ -11,7 +11,23 @@
 
   let lineStatus = correctCommandStatus;
 
-  async function processCommand(event) {
+  function Command(commandExecuted) {
+    this.command = commandExecuted;
+
+    this.getResult = () => {
+      if (this.command == "help") {
+        return [
+          "- Why did you learn to code?",
+          "- How did you learn to code?",
+          "- Did you learn everything by yourself?",
+        ];
+      }
+
+      return "";
+    }
+  }
+
+  async function addCommand(event) {
     let key = event.key;
 
     const RETURN_KEY = "Enter";
@@ -20,8 +36,9 @@
       return;
     }
 
-    commandsExecuted.push(command);
+    commandsExecuted.push(new Command(command));
     commandsExecuted = commandsExecuted;
+    console.log(commandsExecuted);
 
     commandInputField.value = "";
   }
@@ -85,7 +102,7 @@
   }
 </style>
 
-<svelte:window on:keydown={processCommand}></svelte:window>
+<svelte:window on:keydown={addCommand}></svelte:window>
 
 <div class="terminal box">
   <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
@@ -93,8 +110,11 @@
   {#each commandsExecuted as command}
     <div class="row">
       <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
-      <p class="command">{command}</p>
+      <p class="command">{command.command}</p>
     </div>
+    {#each command.getResult() as sentence}
+      <p>{sentence}</p>  
+    {/each}
   {/each}
   <div class="row">
     <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
