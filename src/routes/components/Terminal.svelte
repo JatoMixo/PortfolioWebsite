@@ -2,10 +2,26 @@
   const leftArrow = "";
   let command = "";
 
+  let commandsExecuted = [];
+
   const correctCommandStatus = "#00FFCA";
   const wrongCommandStatus = "#FF0000";
 
   let lineStatus = correctCommandStatus;
+
+  function processCommand(event) {
+    let key = event.key;
+
+    const RETURN_KEY = "Enter";
+
+    if (key != RETURN_KEY) {
+      return;
+    }
+
+    commandsExecuted.push(command);
+    commandsExecuted = commandsExecuted;
+    console.log(commandsExecuted);
+  }
 </script>
 
 <style lang="scss">
@@ -15,6 +31,12 @@
 
     p {
       margin: 0;
+    }
+
+    .command {
+      display: block;
+
+      transform: TranslateY(15%);
     }
 
     input {
@@ -57,9 +79,17 @@
   }
 </style>
 
+<svelte:window on:keydown={processCommand}></svelte:window>
+
 <div class="terminal box">
   <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
   <p>Type <span class="green-flash">help</span> to know more about me</p>
+  {#each commandsExecuted as command}
+    <div class="row">
+      <p class="cursor">{leftArrow}</p>
+      <p class="command">{command}</p>
+    </div>
+  {/each}
   <div class="row">
     <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
     <input type="text" bind:value={command}>
