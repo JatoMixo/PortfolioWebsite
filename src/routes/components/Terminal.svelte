@@ -2,6 +2,8 @@
   const leftArrow = "";
   let command = "";
 
+  let commandInputField;
+
   let commandsExecuted = [];
 
   const correctCommandStatus = "#00FFCA";
@@ -9,7 +11,7 @@
 
   let lineStatus = correctCommandStatus;
 
-  function processCommand(event) {
+  async function processCommand(event) {
     let key = event.key;
 
     const RETURN_KEY = "Enter";
@@ -20,7 +22,8 @@
 
     commandsExecuted.push(command);
     commandsExecuted = commandsExecuted;
-    console.log(commandsExecuted);
+
+    commandInputField.value = "";
   }
 </script>
 
@@ -37,6 +40,8 @@
       display: block;
 
       transform: TranslateY(15%);
+
+      font-size: 3vh;
     }
 
     input {
@@ -86,12 +91,12 @@
   <p>Type <span class="green-flash">help</span> to know more about me</p>
   {#each commandsExecuted as command}
     <div class="row">
-      <p class="cursor">{leftArrow}</p>
+      <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
       <p class="command">{command}</p>
     </div>
   {/each}
   <div class="row">
     <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
-    <input type="text" bind:value={command}>
+    <input type="text" bind:value={command} bind:this={commandInputField}>
   </div>
 </div>
