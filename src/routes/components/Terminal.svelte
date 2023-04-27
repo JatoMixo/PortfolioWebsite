@@ -9,8 +9,6 @@
   const correctCommandStatus = "#00FFCA";
   const wrongCommandStatus = "#FF0000";
 
-  let lineStatus = correctCommandStatus;
-
   function Command(commandExecuted) {
     this.command = commandExecuted;
 
@@ -29,7 +27,6 @@
 
   async function addCommand(event) {
     let key = event.key;
-
     const RETURN_KEY = "Enter";
 
     if (key != RETURN_KEY) {
@@ -38,7 +35,6 @@
 
     commandsExecuted.push(new Command(command));
     commandsExecuted = commandsExecuted;
-    console.log(commandsExecuted);
 
     commandInputField.value = "";
   }
@@ -56,9 +52,15 @@
     .command {
       display: block;
 
-      transform: TranslateY(15%);
+      transform: TranslateY(20%);
 
-      font-size: 3vh;
+      font-size: 2.65vh;
+    }
+
+    .command-result {
+      font-size: 2.5vh;
+
+      margin-left: 1.5vw;
     }
 
     input {
@@ -109,15 +111,15 @@
   <p>Type <span class="green-flash">help</span> to know more about me</p>
   {#each commandsExecuted as command}
     <div class="row">
-      <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
+      <p style="font-size: 150%; color: {(command.getResult() != "") ? correctCommandStatus : wrongCommandStatus};">{leftArrow}</p>
       <p class="command">{command.command}</p>
     </div>
     {#each command.getResult() as sentence}
-      <p>{sentence}</p>  
+      <p class="command-result">{sentence}</p>  
     {/each}
   {/each}
   <div class="row">
-    <p style="font-size: 150%; color: {lineStatus};">{leftArrow}</p>
+    <p style="font-size: 150%;">{leftArrow}</p>
     <input spellcheck="false" bind:value={command} bind:this={commandInputField}>
   </div>
 </div>

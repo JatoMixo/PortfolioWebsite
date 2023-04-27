@@ -1,7 +1,12 @@
 <script>
+  // Components
+  import Project from "./components/Project.svelte";
   import ToolCard from "./components/ToolCard.svelte";
   import Terminal from "./components/Terminal.svelte";
+  
+  // Images
   import JatoMixoLogo from "./images/jatomixo/jatomixo_logo.png";
+  import GithubLogo from "./images/GithubLogo.png";
 </script>
 
 <style lang="scss">
@@ -53,4 +58,8 @@
 
 <hr>
 
-<Terminal default_text="Type something good please"/>
+<Terminal/>
+
+<hr>
+
+<Project name="Website" tool={GithubLogo} description="A website." github="https://github.com/JatoMixo/PortfolioWebsite"/>
