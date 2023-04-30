@@ -119,7 +119,8 @@
     {/each}
   {/each}
   <div class="row">
-    <p style="font-size: 150%;">{leftArrow}</p>
+    <!--<p style="font-size: 150%;">{leftArrow}</p>-->
+    <div class="nf nf-fa-caret_right"></div>
     <input spellcheck="false" bind:value={command} bind:this={commandInputField}>
   </div>
 </div>

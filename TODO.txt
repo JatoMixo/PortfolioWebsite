@@ -1,0 +1,11 @@
+- Bugs/Shits
+  - Fix proportions (vw/vh)
+  - Show Terminal arrow
+
+- Components
+  - Create Project Toolcard
+  - Create commands for the terminal
+  - Make the terminal arrow update with the command
+  - Implement typewriter animation
+  - Make the animations to show everything
+  - Build the actual website
