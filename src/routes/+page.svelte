@@ -27,17 +27,19 @@
     position: relative;
 
     img {
-      width: 60%;
+      width: 57.5dvw;
+
+      margin-top: 2dvh;
 
       animation-name: flash-animation;
       animation-duration: 500ms;
     }
 
     h1 {
-      margin-top: 3vw;
-      margin-bottom: 3vw;
+      margin-top: 2dvh;
+      margin-bottom: 2dvh;
 
-      font-size: 6vw;
+      font-size: 6dvw;
       text-shadow: 0 0 5px white;
     }
   }

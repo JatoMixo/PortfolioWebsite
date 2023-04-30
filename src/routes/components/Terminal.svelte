@@ -54,11 +54,11 @@
 
       transform: TranslateY(20%);
 
-      font-size: 2.65vh;
+      font-size: 25px;
     }
 
     .command-result {
-      font-size: 2.5vh;
+      font-size: 20px;
 
       margin-left: 1.5vw;
     }
@@ -119,8 +119,7 @@
     {/each}
   {/each}
   <div class="row">
-    <!--<p style="font-size: 150%;">{leftArrow}</p>-->
-    <div class="nf nf-fa-caret_right"></div>
+    <p style="font-size: 150%;">{leftArrow}</p>
     <input spellcheck="false" bind:value={command} bind:this={commandInputField}>
   </div>
 </div>

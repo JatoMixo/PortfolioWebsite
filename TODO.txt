@@ -1,5 +1,4 @@
 - Bugs/Shits
-  - Fix proportions (vw/vh)
   - Show Terminal arrow
 
 - Components
