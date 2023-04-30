@@ -1,5 +1,5 @@
 - Bugs/Shits
-  - Show Terminal arrow
+  - Fix shadows on Firefox
 
 - Components
   - Create Project Toolcard
