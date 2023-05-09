@@ -41,26 +41,6 @@
   }
 </style>
 
-<!--{#if link == ""}
-<div class="animation">
-  <div class="box">
-    <img src={image} alt="Didn't load"/>
-    <h1>{name}</h1>
-    <p>{description}</p>
-  </div>
-</div>
-{:else}
-<div class="animation">
-  <a href={link}>
-    <div class="box">
-      <img src={image} alt="Didn't load"/>
-      <h1>{name}</h1>
-      <p>{description}</p>
-    </div>
-  </a>
-</div>
-{/if}-->
-
 <div class="animation">
   <div class="box">
     <img src={image} alt="Didn't load"/>

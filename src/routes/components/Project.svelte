@@ -4,7 +4,7 @@
   export let description = "";
   export let github = "";
 
-  import GithubLogo from "../images/GithubLogo.png";
+  import GithubLogo from "../images/tech/GithubLogo.png";
 </script>
 
 <style lang="scss">
@@ -12,31 +12,35 @@
   $margin-left: 0.75vw;
   $cyan-color: #00C5FF;
 
-  h1 {
-    font-size: 4vh;
-
-    margin-left: 0.1vw;
-    margin-top: 0.1vw;
-  }
-
   .box {
     padding: 0;
 
-    width: 20%;
+    margin: 15px;
   }
 
-  .inner-box {
+  .animation {
+    transform: translateY(0px);
+    transition: transform 0.5s ease;
+
     width: fit-content;
+  }
+
+  .animation:hover {
+    transform: translateY(-10px);
   }
 
   h1 {
     margin-left: $margin-left;
     margin-top: 1.25vh;
+
+    font-size: 4vh;
   }
 
   p {
     margin-left: $margin-left;
     margin-top: 0;
+
+    font-size: 85%;
   }
 
   img {
@@ -68,21 +72,33 @@
 
     text-decoration: none;
   }
+
+  #inner-box {
+    margin: -5px;
+
+    margin-left: 100px;
+
+    img {
+      margin-top: 5px;
+    }
+  }
 </style>
 
-<div class="box">
-  <div class="row">
-    <h1>{name}</h1>
-    <div class="box inner-box">
-      <img src={tool} alt="Didn't load" style="width: 3vw;"/>
+<div class="animation">
+  <div class="box">
+    <div class="row">
+      <h1>{name}</h1>
+      <div class="box" id="inner-box">
+        <img src={tool} alt="Didn't load"/>
+      </div>
     </div>
+    <p>{description}</p>
+    <hr>
+    <a href={github} target="_blank">
+      <div class="github-element row">
+        <img src={GithubLogo} alt="Didn't load">
+        <p>GitHub</p>
+      </div>
+    </a>
   </div>
-  <p>{description}</p>
-  <hr>
-  <a href={github} target="_blank">
-    <div class="github-element row">
-      <img src={GithubLogo} alt="Didn't load">
-      <p>GitHub</p>
-    </div>
-  </a>
 </div>

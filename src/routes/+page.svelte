@@ -6,7 +6,13 @@
   
   // Images
   import JatoMixoLogo from "./images/jatomixo/jatomixo_logo.png";
-  import GithubLogo from "./images/GithubLogo.png";
+  import GithubLogo from "./images/tech/GithubLogo.png";
+  import SvelteLogo from "./images/tech/SvelteLogo.png"
+  import CSLogo from "./images/tech/CSLogo.png"
+  import UnityLogo from "./images/tech/UnityLogo.png"
+  import PythonLogo from "./images/tech/PythonLogo.png";
+  import RustLogo from "./images/tech/RustLogo.png";
+  import LinuxLogo from "./images/tech/LinuxLogo.png";
 </script>
 
 <style lang="scss">
@@ -56,7 +62,7 @@
 <!--About-->
 <h1>About</h1>
 
-<ToolCard img="" description="Something." name="Something"/>
+<ToolCard image={SvelteLogo} description="Something." name="Something"/>
 
 <hr>
 
@@ -64,4 +70,5 @@
 
 <hr>
 
-<Project name="Website" tool={GithubLogo} description="A website." github="https://github.com/JatoMixo/PortfolioWebsite"/>
+<Project name="Website" tool={SvelteLogo} description="A website." github="https://github.com/JatoMixo/PortfolioWebsite"/>
+<Project name="Water-Heater Automata" tool={GithubLogo} description="An automata for a water heater" github="https://github.com/JatoMixo/Automata-Calentador"/>
