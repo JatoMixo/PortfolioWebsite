@@ -62,8 +62,14 @@
 <!--About-->
 <h1>About</h1>
 
-<ToolCard image={SvelteLogo} description="Something." name="Something"/>
-
+<div class="row">
+  <ToolCard image={CSLogo} description="Something." name="Something"/>
+  <ToolCard image={LinuxLogo} name="Linux" description="Best OS ever"/>
+  <ToolCard image={PythonLogo} name="Python" description="Decent language"/>
+  <ToolCard image={RustLogo} name="Rust" description="Amazing language"/>
+  <ToolCard image={SvelteLogo} name="Svelte" description="Best JS framerok"/>
+  <ToolCard image={UnityLogo} name="Unity" description="Shit I used 2 years ago"/>
+</div>
 <hr>
 
 <Terminal/>

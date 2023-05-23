@@ -9,12 +9,14 @@
   $default_box_width: 10%;
 
   .box {
-    width: fit-content;
+    width: 150px;
     height: fit-content;
 
     img {
       height: 100%;
       width: 100%;
+
+      margin-left: 0px;
     }
   }
 

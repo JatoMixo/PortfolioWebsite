@@ -1,10 +1,8 @@
-- Bugs/Shits
-  - Fix shadows on Firefox
+- Bug fixes 
+  - Fix Project Toolcard not apadting great to zoom
 
 - Components
-  - Create Project Toolcard
-  - Create commands for the terminal
-  - Make the terminal arrow update with the command
+  - Create visual novel-like "terminal"
   - Implement typewriter animation
   - Make the animations to show everything
   - Build the actual website
