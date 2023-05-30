@@ -6,6 +6,7 @@
 
 <style lang="scss">
 
+  $image-height: 0px; // To change later
   $default_box_width: 10%;
 
   .box {

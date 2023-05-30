@@ -63,7 +63,7 @@
 <h1>About</h1>
 
 <div class="row">
-  <ToolCard image={CSLogo} description="Something." name="Something"/>
+  <ToolCard image={CSLogo} description="Something." name="C#"/>
   <ToolCard image={LinuxLogo} name="Linux" description="Best OS ever"/>
   <ToolCard image={PythonLogo} name="Python" description="Decent language"/>
   <ToolCard image={RustLogo} name="Rust" description="Amazing language"/>
