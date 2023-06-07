@@ -3,6 +3,7 @@
   import Project from "./components/Project.svelte";
   import ToolCard from "./components/ToolCard.svelte";
   import Terminal from "./components/Terminal.svelte";
+  import QuestionBox from "./components/QuestionBox.svelte";
   
   // Images
   import JatoMixoLogo from "./images/jatomixo/jatomixo_logo.png";
@@ -73,8 +74,10 @@
 <hr>
 
 <Terminal/>
+<br>
+<QuestionBox/>
 
 <hr>
 
 <Project name="Website" tool={SvelteLogo} description="A website." github="https://github.com/JatoMixo/PortfolioWebsite"/>
-<Project name="Water-Heater Automata" tool={GithubLogo} description="An automata for a water heater" github="https://github.com/JatoMixo/Automata-Calentador"/>
+<Project name="Water-Heater Automata" tool={PythonLogo} description="An automata for a water heater" github="https://github.com/JatoMixo/Automata-Calentador"/>

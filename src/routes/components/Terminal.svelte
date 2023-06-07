@@ -81,27 +81,6 @@
       outline: none;
     }
   }
-
-  .green-flash {
-    $green-color: #00FFCA;
-    color: $green-color; 
-
-    text-shadow: 0 0 10px $green-color;
-  }
-
-  .blue-flash {
-    $blue-color: #1f2799;
-    color: $blue-color;
-
-    text-shadow: 0 0 10px $blue-color;
-  }
-
-  .yellow-flash {
-    $yellow-color: #FFC857;
-    color: $yellow-color;
-
-    text-shadow: 0 0 10px $yellow-color;
-  }
 </style>
 
 <svelte:window on:keydown={addCommand}></svelte:window>

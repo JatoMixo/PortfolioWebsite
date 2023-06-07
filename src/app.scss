@@ -50,3 +50,36 @@ h1 {
 p {
   text-shadow: 0 0 4px;
 }
+
+.green-flash {
+  $green-color: #00FFCA;
+  color: $green-color; 
+
+  text-shadow: 0 0 10px $green-color;
+}
+
+.blue-flash {
+  $blue-color: #1f2799;
+  color: $blue-color;
+
+  text-shadow: 0 0 10px $blue-color;
+}
+
+.yellow-flash {
+  $yellow-color: #FFC857;
+  color: $yellow-color;
+
+  text-shadow: 0 0 10px $yellow-color;
+}
+
+button {
+  font-family: "Hack Nerd Font";
+
+  text-shadow: 0 0 4px whitesmoke;
+  width: 100%;
+
+  text-align: left;
+
+  font-size: 100%;
+  color: whitesmoke;
+}
