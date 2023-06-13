@@ -14,10 +14,11 @@
     height: fit-content;
 
     img {
-      height: 100%;
-      width: 100%;
+      height: 15dvh;
 
-      margin-left: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
