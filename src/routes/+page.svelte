@@ -33,6 +33,7 @@
 
     position: relative;
     margin-top: 3dvh;
+    margin-bottom: 5dvh;
 
     img {
       width: 57.5dvw;

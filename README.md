@@ -1,38 +1,69 @@
-# create-svelte
+# JatoMixo.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is my SvelteKit Project combined with Scss for creating my own website.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
+## To work with this project
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+# Clone the repository
+git clone git@github.com:JatoMixo/PortfolioWebsite.git
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+# Start dev preview (Go to localhost:5173 in your browser)
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
+# To build the actual project
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Components
+There are several built-in components I have made for the website which include:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Tool Card
+Used to show data about the tools I use
+
+```html
+<ToolCard image={IMPORTED_IMAGE_FROM_SCRIPT_TAG} name={NAME_OF_THE_TOOL} description={DESCRIPTION_OF_TOOL}>
+```
+
+### Project
+Used to show data about a project I have made
+
+```html
+<Project name={NAME_OF_PROJECT} description={DESCRIPTION_OF_PROJECT} github={GITHUB_LINK_OF_PROJECT} tool={IMAGE_CONTAINED_LOGO_OF_TOOL_USED}>
+```
+
+### Question Box
+A Question Box inspired from old Point-And-Click adventures like The Secret Of Monkey Island.
+With this, users can ask questions and receive an answer.
+
+```html
+<QuestionBox>
+```
+
+To edit the questions and answers, go to `/src/routes/components/QuestionBox.svelte` and change the `questions` dictionary following the next schema:
+```javascript
+const questions = {
+    "FIRST_QUESTION": "FIRST_ANSWER",
+    "ANOTHER_QUESTION": "ANOTHER_ANSWER",
+};
+```
+
+### Terminal (Deprecated)
+Working terminal
+
+To edit the commands go to `/src/routes/components/Terminal.svelte` and change the  `Command().getResult()` function adding a new if statement for the command returning an array of the strings with the lines you want to print.
+
+##### Exmaple
+```javascript
+    function Command(commandExecuted) {
+        this.command = commandExecuted;
+
+        this.getResult = () => {
+            if (this.command == "Test Command") {
+                return ["Hello, this is line one of the answer.",
+                        "Hello World! This is line 2"];
+            }
+
+            return ["Invalid command"];
+        }
+    }
+```
