@@ -52,7 +52,7 @@ Working terminal
 
 To edit the commands go to `/src/routes/components/Terminal.svelte` and change the  `Command().getResult()` function adding a new if statement for the command returning an array of the strings with the lines you want to print.
 
-##### Exmaple
+##### Example
 ```javascript
     function Command(commandExecuted) {
         this.command = commandExecuted;
