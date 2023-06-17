@@ -54,16 +54,16 @@ To edit the commands go to `/src/routes/components/Terminal.svelte` and change t
 
 ##### Example
 ```javascript
-    function Command(commandExecuted) {
-        this.command = commandExecuted;
+function Command(commandExecuted) {
+    this.command = commandExecuted;
 
-        this.getResult = () => {
-            if (this.command == "Test Command") {
-                return ["Hello, this is line one of the answer.",
-                        "Hello World! This is line 2"];
-            }
-
-            return ["Invalid command"];
+    this.getResult = () => {
+        if (this.command == "Test Command") {
+            return ["Hello, this is line one of the answer.",
+                    "Hello World! This is line 2"];
         }
+
+        return ["Invalid command"];
     }
+}
 ```
