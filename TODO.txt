@@ -1,8 +1,0 @@
-- Bug fixes 
-  - Fix Project Toolcard not apadting great to zoom
-
-- Components
-  - Create visual novel-like "terminal"
-  - Implement typewriter animation
-  - Make the animations to show everything
-  - Build the actual website
