@@ -10,8 +10,8 @@
   $default_box_width: 10%;
 
   .box {
-    width: 150px;
-    height: fit-content;
+    width: 175px;
+    height: fit-content; // 390 looks nice
 
     img {
       height: 15dvh;
