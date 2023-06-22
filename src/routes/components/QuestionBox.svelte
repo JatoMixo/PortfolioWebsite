@@ -64,16 +64,22 @@
     .question-body {
         color: #cccccc;
     }
+
+    .secondary-typewriter {
+        $animation-typewriter-animation: 2s;
+
+        animation-delay: $animation-typewriter-animation;
+    }
 </style>
 
 <div class="box" id="main-box">
 
     {#if actual_question == ""}
-        <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
-        <p>Click on the <span class="green-flash">questions</span> below to know more about me.</p>
+        <p class="typewriter">Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
+        <p class="typewriter secondary-typewriter" style="animation-delay: $typewriter-animation-duration;">Click on the <span class="green-flash">questions</span> below to know more about me.</p>
     {:else}
-        <p class="question-title">{actual_question}</p>
-        <p class="question-body">{questions[actual_question]}</p>
+        <p class="question-title typewriter">{actual_question}</p>
+        <p class="question-body typewriter secondary-typewriter">{questions[actual_question]}</p>
     {/if}
 
     <div id="questions-section">
