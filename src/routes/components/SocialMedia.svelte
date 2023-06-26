@@ -6,14 +6,14 @@
 
 <style lang="scss">
   a {
-    width: 3dvw;
+    width: 100%;
     min-width: 50px;
     height: auto;
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 4dvw;
+    min-width: 50px;
 
     margin: 0px;
 
@@ -24,8 +24,7 @@
   }
 
   img:hover {
-    width: 110%;
-    height: 110%;
+    width: 5dvw;
 
     opacity: 1;
   }

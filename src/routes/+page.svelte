@@ -66,7 +66,7 @@
   }
 
   #jatomixo-logo-links {
-
+    width: 15dvw;
   }
 
   #question-box-row {
@@ -83,6 +83,7 @@
 
   #question-box {
     float: right;
+    display: block;
 
     width: fit-content;
     height: fit-content;
