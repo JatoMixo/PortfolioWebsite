@@ -31,6 +31,13 @@ Used to show data about a project I have made
 <Project name={NAME_OF_PROJECT} description={DESCRIPTION_OF_PROJECT} github={GITHUB_LINK_OF_PROJECT} tool={IMAGE_CONTAINED_LOGO_OF_TOOL_USED}>
 ```
 
+### Social Media
+Used to show the logo of a social media app like twitter with a link to my account.
+
+```html
+<SocialMedia link={LINK_TO_ACCOUNT} image={LOGO_FOR_SOCIAL_MEDIA} image_alt={ALT_PROPERTY_FOR_IMAGE}>
+```
+
 ### Question Box
 A Question Box inspired from old Point-And-Click adventures like The Secret Of Monkey Island.
 With this, users can ask questions and receive an answer.

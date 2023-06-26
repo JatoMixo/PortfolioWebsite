@@ -82,7 +82,10 @@
   }
 
   #question-box {
-    float: right
+    float: right;
+
+    width: fit-content;
+    height: fit-content;
   }
 </style>
 
@@ -95,7 +98,7 @@
 </div>
 
 <!-- Question Box and Social Media -->
-<div id="question-box-row">
+<div id="question-box-row" class="row">
   <div id="logo-with-links">
     <img src={JatoMixoLogoCircle} alt="JatoMixo" id="jatomixo-logo-links"/>
 
