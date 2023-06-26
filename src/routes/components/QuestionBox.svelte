@@ -20,16 +20,16 @@
     #main-box {
         position: relative;
 
-        height: 30dvh;
+        min-height: 30dvh;
         width: 63dvw;
     }
 
     #questions-section {
 
-        position: absolute;
+        position: relative;
         bottom: 0;
 
-        margin-bottom: 1.5dvh;
+        margin-bottom: 1dvh;
     }
 
     .question-button {
@@ -73,11 +73,11 @@
 <div class="box" id="main-box">
 
     {#if actual_question == ""}
-        <p class="typewriter">Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
-        <p class="typewriter secondary-typewriter" style="animation-delay: $typewriter-animation-duration;">Click on the <span class="green-flash">questions</span> below to know more about me.</p>
+        <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
+        <p>Click on the <span class="green-flash">questions</span> below to know more about me.</p>
     {:else}
-        <p class="question-title typewriter">{actual_question}</p>
-        <p class="question-body typewriter secondary-typewriter">{questions[actual_question]}</p>
+        <p class="question-title">{actual_question}</p>
+        <p>{questions[actual_question]}</p>
     {/if}
 
     <div id="questions-section">
