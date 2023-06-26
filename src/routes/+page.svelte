@@ -65,18 +65,24 @@
     }
   }
 
-  .jatomixo-logo-circle {
-    max-width: 15dvw;
+  #jatomixo-logo-links {
 
-    transform: translateX(5dvw);
-
-    position: relative;
-    align-self: center;
   }
 
-  .question-box-row {
-    display: block;
+  #question-box-row {
 
+  }
+
+  #logo-with-links {
+
+  }
+
+  #social-media-row {
+
+  }
+
+  #question-box {
+    float: right
   }
 </style>
 
@@ -89,18 +95,17 @@
 </div>
 
 <!-- Question Box and Social Media -->
-<div class="question-box-row">
+<div id="question-box-row">
+  <div id="logo-with-links">
+    <img src={JatoMixoLogoCircle} alt="JatoMixo" id="jatomixo-logo-links"/>
 
-  <div>
-    <img src={JatoMixoLogoCircle} alt="JatoMixo" class="jatomixo-logo-circle"/>
-
-    <div class="row">
+    <div id="social-media-row">
       <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub"/>
       <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter"/>
     </div>
   </div>
 
-  <div style="float: right;">
+  <div id="question-box">
     <QuestionBox/>
   </div>
 </div>
