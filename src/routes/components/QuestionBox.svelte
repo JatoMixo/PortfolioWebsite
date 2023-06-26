@@ -19,9 +19,6 @@
 
     #main-box {
         position: relative;
-
-        min-height: 30dvh;
-        width: 63dvw;
     }
 
     #questions-section {
@@ -29,7 +26,8 @@
         position: relative;
         bottom: 0;
 
-        margin-bottom: 1dvh;
+        margin-left: 0px;
+        margin-top: 4dvh;
     }
 
     .question-button {
@@ -42,6 +40,8 @@
         margin-top: 5px;
 
         transition: background-color 0.1s, border-color 0.1s;
+
+        margin-left: 0px;
     }
 
     .question-button:hover {
@@ -73,11 +73,11 @@
 <div class="box" id="main-box">
 
     {#if actual_question == ""}
-        <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff</p>
+        <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a High School Student who loves <span class="yellow-flash">programming</span> stuff.</p>
         <p>Click on the <span class="green-flash">questions</span> below to know more about me.</p>
     {:else}
         <p class="question-title">{actual_question}</p>
-        <p>{questions[actual_question]}</p>
+        <p class="question-body">{questions[actual_question]}</p>
     {/if}
 
     <div id="questions-section">
