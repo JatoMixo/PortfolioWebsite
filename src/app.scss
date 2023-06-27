@@ -56,6 +56,10 @@ p {
   color: $green-color; 
 
   text-shadow: 0 0 10px $green-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .dark-green-flash {
@@ -63,6 +67,10 @@ p {
 
   color: $dark-green-color;
   text-shadow: 0 0 10px $dark-green-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .blue-flash {
@@ -70,6 +78,10 @@ p {
   color: $blue-color;
 
   text-shadow: 0 0 10px $blue-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .yellow-flash {
@@ -77,6 +89,10 @@ p {
   color: $yellow-color;
 
   text-shadow: 0 0 10px $yellow-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .purple-flash {
@@ -84,6 +100,10 @@ p {
   color: $purple-color;
 
   text-shadow: 0 0 10px $purple-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .red-flash {
@@ -91,6 +111,10 @@ p {
   color: $red-color;
   
   text-shadow: $red-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 button {
