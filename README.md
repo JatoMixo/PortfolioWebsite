@@ -38,7 +38,7 @@ Used to show the logo of a social media app like twitter with a link to my accou
 <SocialMedia link={LINK_TO_ACCOUNT} image={LOGO_FOR_SOCIAL_MEDIA} image_alt={ALT_PROPERTY_FOR_IMAGE}>
 ```
 
-### Question Box
+### Question Box (Deprecated)
 A Question Box inspired from old Point-And-Click adventures like The Secret Of Monkey Island.
 With this, users can ask questions and receive an answer.
 

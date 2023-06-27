@@ -68,14 +68,6 @@
     width: 15dvw;
   }
 
-  #question-box {
-    float: right;
-    display: block;
-
-    width: fit-content;
-    height: fit-content;
-  }
-
   #about-me {
     position: relative;
 
