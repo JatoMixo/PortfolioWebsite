@@ -58,6 +58,13 @@ p {
   text-shadow: 0 0 10px $green-color;
 }
 
+.dark-green-flash {
+  $dark-green-color: #00AB88;
+
+  color: $dark-green-color;
+  text-shadow: 0 0 10px $dark-green-color;
+}
+
 .blue-flash {
   $blue-color: #1f2799;
   color: $blue-color;
@@ -70,6 +77,13 @@ p {
   color: $yellow-color;
 
   text-shadow: 0 0 10px $yellow-color;
+}
+
+.purple-flash {
+  $purple-color: #612974;
+  color: $purple-color;
+
+  text-shadow: 0 0 10px $purple-color;
 }
 
 button {

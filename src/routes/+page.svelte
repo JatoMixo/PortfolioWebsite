@@ -2,7 +2,6 @@
   // Components
   import Project from "./components/Project.svelte";
   import ToolCard from "./components/ToolCard.svelte";
-  import QuestionBox from "./components/QuestionBox.svelte";
   import SocialMedia from "./components/SocialMedia.svelte";
   
   // Images
@@ -69,24 +68,28 @@
     width: 15dvw;
   }
 
-  #question-box-row {
-
-  }
-
-  #logo-with-links {
-
-  }
-
-  #social-media-row {
-
-  }
-
   #question-box {
     float: right;
     display: block;
 
     width: fit-content;
     height: fit-content;
+  }
+
+  #about-me {
+    position: relative;
+
+    float: right;
+
+    background-color: $secondary-background-color;
+    box-shadow: -10px 10px #121212;
+    border-radius: 15px;
+
+    $padding-lateral: 1dvw;
+    padding-left: $padding-lateral;
+    padding-right: $padding-lateral;
+
+    color: #E6E6E6;
   }
 </style>
 
@@ -109,8 +112,14 @@
     </div>
   </div>
 
-  <div id="question-box">
-    <QuestionBox/>
+  <div id="about-me">
+    <h1>About me</h1>
+    <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a <span class="green-flash">High School student</span> who loves<span class="yellow-flash"> programming</span> stuff.</p>
+
+    <p>Right now (2023), I'm 15 years old and I started coding small games on Unity back when I was 13.
+      From that point, I started learning and looking into several programming areas like<span class="dark-green-flash">Web Development</span>or<span class="purple-flash">Low-Level Systems Programming</span>. 
+    </p>
+
   </div>
 </div>
 
