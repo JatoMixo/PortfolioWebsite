@@ -82,6 +82,8 @@
     padding-right: $padding-lateral;
 
     color: #E6E6E6;
+
+    font-size: calc(15px + 0.75dvw);
   }
 </style>
 
@@ -111,6 +113,8 @@
     <p>Right now (2023), I'm 15 years old and I started coding small games on Unity back when I was 13.
       From that point, I started learning and looking into several programming areas like<span class="dark-green-flash">Web Development</span>or<span class="purple-flash">Low-Level Systems Programming</span>. 
     </p>
+
+    <p>Right now, I'm trying to learn<span class="red-flash">Embedded Rust</span>by attending to some katas in my town.</p>
 
   </div>
 </div>
