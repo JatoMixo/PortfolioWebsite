@@ -54,10 +54,6 @@
     }
   }
 
-  #jatomixo-logo-links {
-    width: 15dvw;
-  }
-
   #about-me {
     position: relative;
 
@@ -81,12 +77,14 @@
   }
 
   #jatomixo-logo-links {
-    display: block;
+    display: table-cell;
 
     margin-left: auto;
     margin-right: auto;
 
     width: calc(50% * 1.75);
+
+    vertical-align: middle;
   }
 </style>
 
