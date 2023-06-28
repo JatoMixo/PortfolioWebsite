@@ -24,16 +24,6 @@
 </script>
 
 <style lang="scss">
-
-  @keyframes flash-animation {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
-
   .center-container {
     margin-top: 2dvw;
 
@@ -54,9 +44,6 @@
 
     img {
       width: 60dvw;
-
-      animation-name: flash-animation;
-      animation-duration: 500ms;
     }
 
     h1 {
@@ -88,6 +75,19 @@
 
     font-size: calc(14px + 0.75dvw);
   }
+
+  #social-media-row {
+
+  }
+
+  #jatomixo-logo-links {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: calc(50% * 1.75);
+  }
 </style>
 
 <!-- Get data from window -->
@@ -102,7 +102,7 @@
 </div>
 
 <!-- Question Box and Social Media -->
-<div id="question-box-row" class="row">
+<div id="about-me-section" class="row">
 
   {#if windowWidth > 550}
     <div id="logo-with-links">
