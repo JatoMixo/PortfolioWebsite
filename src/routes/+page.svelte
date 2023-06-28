@@ -104,7 +104,7 @@
 <!-- Question Box and Social Media -->
 <div id="question-box-row" class="row">
 
-  {#if windowWidth > 500}
+  {#if windowWidth > 550}
     <div id="logo-with-links">
       <img src={JatoMixoLogoCircle} alt="JatoMixo" id="jatomixo-logo-links"/>
 
