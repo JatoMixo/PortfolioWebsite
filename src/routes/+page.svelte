@@ -72,8 +72,19 @@
     font-size: calc(14px + 0.75dvw);
   }
 
-  #social-media-row {
+  .social-link {
 
+  }
+
+  #social-media-row {
+    display: flex;
+
+    justify-items: center;
+    align-items: center;
+
+    margin-top: 2dvh;
+
+    height: 5dvw;
   }
 
   #jatomixo-logo-links {
@@ -107,8 +118,8 @@
       <img src={JatoMixoLogoCircle} alt="JatoMixo" id="jatomixo-logo-links"/>
 
       <div id="social-media-row">
-        <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub"/>
-        <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter"/>
+        <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub" class="social-link"/>
+        <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter" class="social-link"/>
       </div>
     </div>
   {/if}
@@ -117,7 +128,7 @@
     <h1>About me</h1>
     <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a <span class="green-flash">High School student</span> who loves <span class="yellow-flash">programming</span> stuff.</p>
 
-    <p>Right now (2023), I'm 15 years old and I started coding small games on Unity back when I was 13.
+    <p>Right now (2023), I'm 15 years old and I started coding small games on <span class="cyan-flash">Unity</span> back when I was 13.
       From that point, I started learning and looking into several programming areas like <span class="dark-green-flash">Web Development</span> or <span class="purple-flash">Low-Level Systems Programming</span>. 
     </p>
 

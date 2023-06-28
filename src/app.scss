@@ -110,7 +110,18 @@ p {
   $red-color: #D83416;
   color: $red-color;
   
-  text-shadow: $red-color;
+  text-shadow: 0 0 10px $red-color;
+
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.cyan-flash {
+  $cyan-color: #00FFFF;
+  color: $cyan-color;
+
+  text-shadow: 0 0 10px $cyan-color;
 
   padding: 0;
   border: 0;

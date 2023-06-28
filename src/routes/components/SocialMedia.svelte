@@ -6,7 +6,7 @@
 
 <style lang="scss">
   a {
-    width: 100%;
+    width: fit-content;
     min-width: 50px;
     height: auto;
   }
