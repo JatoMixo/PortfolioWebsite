@@ -134,7 +134,7 @@
     <div class="row">
       <h1>About me</h1>
 
-      {#if windowWidth <= SMALL_SCREEN_WIDTH}
+      {#if windowWidth <= SMALL_SCREEN_WIDTH && windowWidth >= 320}
         <div id="social-media-about">
           <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub" class="mobile-social-media"/>
           <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter" class="mobile-social-media"/>
