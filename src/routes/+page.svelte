@@ -21,6 +21,7 @@
 
   // Window dimensions
   let windowWidth;
+  const SMALL_SCREEN_WIDTH = 550;
 </script>
 
 <style lang="scss">
@@ -72,19 +73,24 @@
     font-size: calc(14px + 0.75dvw);
   }
 
-  .social-link {
-
-  }
-
   #social-media-row {
     display: flex;
 
     justify-items: center;
     align-items: center;
 
-    margin-top: 2dvh;
+    margin-top: 1dvh;
 
     height: 5dvw;
+
+    justify-content: center;
+  }
+
+  #social-media-about {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
   }
 
   #jatomixo-logo-links {
@@ -113,19 +119,28 @@
 <!-- Question Box and Social Media -->
 <div id="about-me-section" class="row">
 
-  {#if windowWidth > 550}
+  {#if windowWidth > SMALL_SCREEN_WIDTH}
     <div id="logo-with-links">
       <img src={JatoMixoLogoCircle} alt="JatoMixo" id="jatomixo-logo-links"/>
 
       <div id="social-media-row">
-        <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub" class="social-link"/>
-        <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter" class="social-link"/>
+        <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub"/>
+        <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter"/>
       </div>
     </div>
   {/if}
 
   <div id="about-me">
-    <h1>About me</h1>
+    <div class="row">
+      <h1>About me</h1>
+
+      {#if windowWidth <= SMALL_SCREEN_WIDTH}
+        <div id="social-media-about">
+          <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub" class="mobile-social-media"/>
+          <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter" class="mobile-social-media"/>
+        </div>
+      {/if}
+    </div>
     <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a <span class="green-flash">High School student</span> who loves <span class="yellow-flash">programming</span> stuff.</p>
 
     <p>Right now (2023), I'm 15 years old and I started coding small games on <span class="cyan-flash">Unity</span> back when I was 13.
