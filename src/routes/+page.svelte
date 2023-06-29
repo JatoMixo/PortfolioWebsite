@@ -103,6 +103,21 @@
 
     vertical-align: middle;
   }
+
+  #about-me-section {
+    margin-bottom: 10dvh;
+  }
+
+  #tools-row {
+    display: flex;
+    gap: 4dvw;
+
+    justify-content: center;
+  }
+
+  #tools-identifier {
+    text-align: center;
+  }
 </style>
 
 <!-- Get data from window -->
@@ -151,11 +166,13 @@
   </div>
 </div>
 
-<!--<div class="row">
+<h1 id="tools-identifier">My Tools</h1>
+
+<div id="tools-row">
   <ToolCard image={CSLogo} name="C#" description="I have made several C# projects in the past using the .NET framework and it was the lenguage I started with."/>
   <ToolCard image={SvelteLogo} name="Svelte" description="This website was made using Svelte! It was my first time using a JS framework and the result isn't that bad... or is it?"/>
   <ToolCard image={PythonLogo} name="Python" description="I have worked with Python and Raspberry Pi's in the past to make some automatas and they haven't failed yet, so that's a win."/>
   <ToolCard image={RustLogo} name="Rust" description="I'm learning Rust with the Rust Book made by O'Reilly and I'm also doing some projects with ESP32S2s to learn Embedded Rust"/>
   <ToolCard image={UnityLogo} name="Unity" description="Making games was the first thing I wanted to do, and so, I learnt Unity before anything else."/>
   <ToolCard image={LinuxLogo} name="Linux" description="In 2022, I started learning about Linux and I have some experience personalizing Debian-based distros. Also, I use Kali Linux."/>
-</div>-->
+</div>

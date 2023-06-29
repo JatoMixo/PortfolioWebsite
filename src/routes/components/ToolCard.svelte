@@ -11,10 +11,12 @@
 
   .box {
     width: 175px;
-    height: fit-content; // 390 looks nice
+    height: 390px; // 390 looks nice
+    padding-bottom: 0;
 
     img {
-      height: 15dvh;
+      // height: 15dvh;
+      height: 150px;
 
       display: block;
       margin-left: auto;
