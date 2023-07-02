@@ -94,12 +94,12 @@
   }
 
   #jatomixo-logo-links {
-    display: table-cell;
+    display: flex;
 
     margin-left: auto;
     margin-right: auto;
 
-    width: calc(50% * 1.75);
+    width: 15dvw;
 
     vertical-align: middle;
   }
@@ -117,6 +117,10 @@
 
   #tools-identifier {
     text-align: center;
+  }
+
+  #logo-with-links {
+    justify-content: center;
   }
 </style>
 
