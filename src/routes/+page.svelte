@@ -25,6 +25,21 @@
 </script>
 
 <style lang="scss">
+
+  /* On Scroll Animation */
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatex(-100%);
+    transition: all 1s;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
   .center-container {
     margin-top: 2dvw;
 
