@@ -141,6 +141,15 @@
   #logo-with-links {
     justify-content: center;
   }
+
+  #project-section {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 30px;
+
+    align-content: center;
+  }
 </style>
 
 <!-- Get data from window -->
@@ -210,4 +219,10 @@
   <div class="toolcard">
     <ToolCard image={LinuxLogo} name="Linux" description="In 2022, I started learning about Linux and I have some experience personalizing Debian-based distros. Also, I use Kali Linux." class="toolcard"/>
   </div>
+</div>
+
+<h1 class="section-title">My Projects</h1>
+
+<div id="project-section">
+  <Project title="Test" description="Testing tests..." github="https://github.com" tool={SvelteLogo}/>
 </div>

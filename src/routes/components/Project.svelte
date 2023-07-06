@@ -1,117 +1,92 @@
 <script>
-  export let name = "";
-  export let tool = "";
-  export let description = "";
-  export let github = "";
+    export let title = "";
+    export let description = "";
+    export let github = "";
+    export let tool = "";
 
-  import GithubLogo from "/src/routes/images/tech/GithubLogo.png";
+    import GithubLogo from "/src/routes/images/tech/GithubLogo.png";
 </script>
 
 <style lang="scss">
 
-  $margin-left: 10px;
-  $cyan-color: #00C5FF;
+    $margin: 10px;
 
-  .box {
-    padding: 0;
+    #main-box {
+        padding: 0;
 
-    margin: 15px;
-
-    width: 560px;
-  }
-
-  .animation {
-    transform: translateY(0px);
-    transition: transform 0.5s ease;
-
-    width: fit-content;
-  }
-
-  .animation:hover {
-    transform: translateY(-10px);
-  }
-
-  h1 {
-    margin-left: $margin-left;
-    margin-top: 10px;
-
-    font-size: 35px;
-  }
-
-  p {
-    margin-left: $margin-left;
-    margin-top: 0;
-
-    font-size: 20px;
-  }
-
-  img {
-    height: 50px;
-
-    margin-right: 0;
-  }
-
-  .github-element {
-    height: 6vh;
-    justify-content: center;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    p {
-      margin-top: 0;
-
-      font-size: 35px;
-
-      transform: translateY(35%);
-    }
-  }
-
-  a {
-    color: #E0E0E0;
-
-    :hover {
-      color: white;
+        width: 500px;
     }
 
-    text-decoration: none;
-  }
+    #title-row {
+        display: flex;
 
-  #inner-box {
-    margin: -5px;
-    width: fit-content;
-
-    img {
-      margin-top: 5px;
-      margin-bottom: 5px;
-
-      float: right;
-
-      margin-right: 8px;
-      margin-left: 8px;
+        align-content: center;
+        vertical-align: middle;
     }
-  }
 
-  #title-row {
-    display: flex;
-  }
+    #title {
+        margin: $margin;
+        margin-top: 7px;
+
+        font-size: 45px;
+
+        vertical-align: middle;
+    }
+
+    #description-paragraph {
+        margin: $margin;
+        font-size: 30px;     
+    }
+
+    #tool-box {
+        padding: 5px;
+
+        margin: -5px;
+    }
+
+    #image-tool {
+        width: 60px;
+
+        margin: 0;
+
+        vertical-align: middle;
+    }
+
+    #github-logo {
+        height: 70px;
+
+        vertical-align: middle;
+    }
+
+    #github-link {
+        display: flex;
+
+        align-content: center;
+        vertical-align: middle;
+
+        color: whitesmoke;
+        text-decoration: none;
+
+        font-size: 20px;
+        text-align: center;
+    }
 </style>
 
-<div class="animation">
-  <div class="box">
+< class="box" id="main-box">
     <div id="title-row">
-      <h1>{name}</h1>
-      <div class="box" id="inner-box">
-        <img src={tool} alt="Didn't load"/>
-      </div>
+        <h1 id="title">{title}</h1>
+
+        <div id="tool-box" class="box">
+            <img src={tool} alt="Tool" id="image-tool"/>
+        </div>
     </div>
-    <p>{description}</p>
+
+    <p id="description-paragraph">{description}</p>
+
     <hr>
-    <a href={github} target="_blank">
-      <div class="github-element row">
-        <img src={GithubLogo} alt="Didn't load">
-        <p>GitHub</p>
-      </div>
+
+    <a href={github} target="_blank" id="github-link">
+        <img src={GithubLogo} alt="" id="github-logo"/>
+        <h1 id="github-text">GitHub</h1>
     </a>
-  </div>
 </div>
