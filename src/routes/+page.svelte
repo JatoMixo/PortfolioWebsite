@@ -10,6 +10,7 @@
   import GithubLogo from "./images/tech/GithubLogo.png";
   import SvelteLogo from "./images/tech/SvelteLogo.png"
   import CSLogo from "./images/tech/CSLogo.png"
+  import CppLogo from "./images/tech/CppLogo.png";
   import UnityLogo from "./images/tech/UnityLogo.png"
   import PythonLogo from "./images/tech/PythonLogo.png";
   import RustLogo from "./images/tech/RustLogo.png";
@@ -148,7 +149,7 @@
     flex-wrap: wrap;
     gap: 30px;
 
-    align-content: center;
+    justify-content: center;
   }
 </style>
 
@@ -224,5 +225,9 @@
 <h1 class="section-title">My Projects</h1>
 
 <div id="project-section">
-  <Project title="Test" description="Testing tests..." github="https://github.com" tool={SvelteLogo}/>
+  <Project title="My Website" description="The website you're currently watching." tool={SvelteLogo} github="https://github.com/JatoMixo/PortfolioWebsite"/>
+  <Project title="AOC 2022" description="The problems I solved from Advent Of Code 2022" tool={PythonLogo} github="https://github.com/JatoMixo/AdventOfCode2022"/>
+  <Project title="Text Encrypter" description="Encrypt or decrypt text in 5 ways" tool={PythonLogo} github="https://github.com/JatoMixo/PythonEncrypter"/>
+  <Project title="WH-Automata" description="An automata for the water heater in my house" tool={PythonLogo} github="https://github.com/JatoMixo/Automata-Calentador"/>
+  <Project title="Polynominal Calculator" description="Unfinished program for calculating with polynominals" tool={CppLogo} github="https://github.com/JatoMixo/PolynominalCalculator"/>
 </div>
