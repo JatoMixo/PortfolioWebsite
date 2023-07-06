@@ -16,6 +16,8 @@
     padding: 0;
 
     margin: 15px;
+
+    width: 560px;
   }
 
   .animation {
@@ -77,9 +79,13 @@
 
   #inner-box {
     margin: -5px;
+    width: fit-content;
 
     img {
       margin-top: 5px;
+      margin-bottom: 5px;
+
+      float: right;
 
       margin-right: 8px;
       margin-left: 8px;
