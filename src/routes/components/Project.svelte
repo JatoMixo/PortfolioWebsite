@@ -42,10 +42,12 @@
         padding: 5px;
 
         margin: -5px;
+
+        float: right;
     }
 
     #image-tool {
-        width: 60px;
+        width: 50px;
 
         margin: 0;
 
@@ -59,7 +61,8 @@
     }
 
     #github-link {
-        display: flex;
+        width: 100%;
+        height: 100%;
 
         align-content: center;
         vertical-align: middle;
@@ -68,11 +71,29 @@
         text-decoration: none;
 
         font-size: 20px;
-        text-align: center;
+    }
+
+    #link-elements {
+        display: flex;
+        vertical-align: middle;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    #github-logo {
+        vertical-align: middle;
+
+        margin-top: 10px;
+    }
+
+    hr {
+        margin: 0;
     }
 </style>
 
-< class="box" id="main-box">
+<div class="box" id="main-box">
     <div id="title-row">
         <h1 id="title">{title}</h1>
 
@@ -86,7 +107,9 @@
     <hr>
 
     <a href={github} target="_blank" id="github-link">
-        <img src={GithubLogo} alt="" id="github-logo"/>
-        <h1 id="github-text">GitHub</h1>
+        <div id="link-elements">
+            <img src={GithubLogo} alt="" id="github-logo"/>
+            <h1 id="github-text">GitHub</h1>
+        </div>
     </a>
 </div>
