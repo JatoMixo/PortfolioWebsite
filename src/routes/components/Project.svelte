@@ -4,12 +4,12 @@
   export let description = "";
   export let github = "";
 
-  import GithubLogo from "../images/tech/GithubLogo.png";
+  import GithubLogo from "/src/routes/images/tech/GithubLogo.png";
 </script>
 
 <style lang="scss">
 
-  $margin-left: 0.75vw;
+  $margin-left: 10px;
   $cyan-color: #00C5FF;
 
   .box {
@@ -31,20 +31,22 @@
 
   h1 {
     margin-left: $margin-left;
-    margin-top: 1.25vh;
+    margin-top: 10px;
 
-    font-size: 4vh;
+    font-size: 35px;
   }
 
   p {
     margin-left: $margin-left;
     margin-top: 0;
 
-    font-size: 85%;
+    font-size: 20px;
   }
 
   img {
-    height: 6dvh;
+    height: 50px;
+
+    margin-right: 0;
   }
 
   .github-element {
@@ -54,12 +56,12 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
-    font-size: 125%;
-
     p {
       margin-top: 0;
 
-      transform: translateY(50%);
+      font-size: 35px;
+
+      transform: translateY(35%);
     }
   }
 
@@ -76,17 +78,22 @@
   #inner-box {
     margin: -5px;
 
-    margin-left: 100px;
-
     img {
       margin-top: 5px;
+
+      margin-right: 8px;
+      margin-left: 8px;
     }
+  }
+
+  #title-row {
+    display: flex;
   }
 </style>
 
 <div class="animation">
   <div class="box">
-    <div class="row">
+    <div id="title-row">
       <h1>{name}</h1>
       <div class="box" id="inner-box">
         <img src={tool} alt="Didn't load"/>
