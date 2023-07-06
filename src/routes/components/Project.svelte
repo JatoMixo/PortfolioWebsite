@@ -28,7 +28,7 @@
         margin: $margin;
         margin-top: 7px;
 
-        font-size: 45px;
+        font-size: calc(25px + 1dvw);
 
         vertical-align: middle;
     }
@@ -47,7 +47,7 @@
     }
 
     #image-tool {
-        width: 50px;
+        height: calc(30px + 1dvw);
 
         margin: 0;
 

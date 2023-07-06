@@ -229,5 +229,5 @@
   <Project title="AOC 2022" description="The problems I solved from Advent Of Code 2022" tool={PythonLogo} github="https://github.com/JatoMixo/AdventOfCode2022"/>
   <Project title="Text Encrypter" description="Encrypt or decrypt text in 5 ways" tool={PythonLogo} github="https://github.com/JatoMixo/PythonEncrypter"/>
   <Project title="WH-Automata" description="An automata for the water heater in my house" tool={PythonLogo} github="https://github.com/JatoMixo/Automata-Calentador"/>
-  <Project title="P Calculator" description="Unfinished program for polynominal operations" tool={CppLogo} github="https://github.com/JatoMixo/PolynominalCalculator"/>
+  <Project title="Polynominal Calc" description="Unfinished program for polynominal operations" tool={CppLogo} github="https://github.com/JatoMixo/PolynominalCalculator"/>
 </div>
