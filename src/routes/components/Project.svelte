@@ -13,8 +13,9 @@
 
     #main-box {
         padding: 0;
+        margin: 0;
 
-        width: 500px;
+        width: 550px;
     }
 
     #title-row {
@@ -35,7 +36,7 @@
 
     #description-paragraph {
         margin: $margin;
-        font-size: 30px;     
+        font-size: calc(12px + 1dvw);     
     }
 
     #tool-box {
@@ -55,7 +56,7 @@
     }
 
     #github-logo {
-        height: 70px;
+        height: calc(50px + 1.5dvw);
 
         vertical-align: middle;
     }
@@ -70,7 +71,7 @@
         color: whitesmoke;
         text-decoration: none;
 
-        font-size: 20px;
+        font-size: calc(15px + 0.3dvw);
     }
 
     #link-elements {
