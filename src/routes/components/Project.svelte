@@ -44,7 +44,8 @@
 
         margin: -5px;
 
-        float: right;
+        display: block;
+        margin-left: auto;
     }
 
     #image-tool {
