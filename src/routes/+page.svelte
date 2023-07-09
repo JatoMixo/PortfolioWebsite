@@ -32,11 +32,10 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entrie) => {
         if (entrie.isIntersecting) {
-          elementsVisible.push(entrie.target.className);
+          elementsVisible.push(entrie.target.id);
           elementsVisible = elementsVisible;
-          console.log(elementsVisible)
         } else {
-          elementsVisible.pop(entrie.target.className);
+          elementsVisible.pop(entrie.target.id);
           elementsVisible = elementsVisible;
         }
       });
@@ -80,39 +79,6 @@
     animation-name: scroll-animation;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-  }
-
-  @keyframes unscroll-animation {
-    from {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateX(0);
-    }
-    to {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(-100%);
-    }
-  }
-
-  .on-unscroll {
-    animation-name: unscroll-animation;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-
-  /* OLD On Scroll Animation */
-  .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translatex(-100%);
-    transition: all 1s;
-  }
-
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
   }
 
   .center-container {
@@ -231,15 +197,15 @@
 <svelte:window bind:innerWidth={windowWidth}/>
 
 <!--Title/Logo-->
-<div class="center-container">
-  <div class="logo" class:on-scroll={elementsVisible.includes('logo s-y_bCXRrkrYfP')}>
+<div class="center-container" id="logo">
+  <div class="logo" class:on-scroll={elementsVisible.includes('logo')}>
     <img src={JatoMixoLogo} alt="Didn't load correctly"/>
     <h1>JatoMixo</h1>
   </div>
 </div>
 
 <!-- Question Box and Social Media -->
-<div id="about-me-section" class="row">
+<div id="about-me-section" class="row" class:on-scroll={elementsVisible.includes("about-me-section")}>
 
   {#if windowWidth > SMALL_SCREEN_WIDTH}
     <div id="logo-with-links">
@@ -273,9 +239,9 @@
   </div>
 </div>
 
-<h1 class="section-title">My Tools</h1>
+<h1 class="section-title" id="tools-identifier" class:on-scroll={elementsVisible.includes("tools-row")}>My Tools</h1>
 
-<div id="tools-row">
+<div id="tools-row" class:on-scroll={elementsVisible.includes("tools-row")}>
   <div class="toolcard">
     <ToolCard image={CSLogo} name="C#" description="I have made several C# projects in the past using the .NET framework and it was the lenguage I started with."/>
   </div>
@@ -296,9 +262,9 @@
   </div>
 </div>
 
-<h1 class="section-title">My Projects</h1>
+<h1 class="section-title" id="projects-identifier" class:on-scroll={elementsVisible.includes("project-section")}>My Projects</h1>
 
-<div id="project-section">
+<div id="project-section" class:on-scroll={elementsVisible.includes("project-section")}>
   <Project title="My Website" description="The website you're currently watching" tool={SvelteLogo} github="https://github.com/JatoMixo/PortfolioWebsite"/>
   <Project title="AOC 2022" description="The problems I solved from Advent Of Code 2022" tool={PythonLogo} github="https://github.com/JatoMixo/AdventOfCode2022"/>
   <Project title="Text Encrypter" description="Encrypt or decrypt text in 5 different ways" tool={PythonLogo} github="https://github.com/JatoMixo/PythonEncrypter"/>
