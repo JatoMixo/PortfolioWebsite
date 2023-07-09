@@ -23,11 +23,85 @@
   // Window dimensions
   let windowWidth;
   const SMALL_SCREEN_WIDTH = 550;
+
+  // Scroll animation
+  import { onMount } from 'svelte';
+  let elementsVisible = [];
+
+  onMount(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entrie) => {
+        if (entrie.isIntersecting) {
+          elementsVisible.push(entrie.target.className);
+          elementsVisible = elementsVisible;
+          console.log(elementsVisible)
+        } else {
+          elementsVisible.pop(entrie.target.className);
+          elementsVisible = elementsVisible;
+        }
+      });
+    });
+
+    const logoElement = document.querySelectorAll(".logo");
+    logoElement.forEach((element) => observer.observe(element));
+
+    const aboutElement = document.querySelector("#about-me-section");
+    observer.observe(aboutElement);
+
+    const toolsElement = document.querySelector("#tools-row");
+    observer.observe(toolsElement);
+
+    const projectsElement = document.querySelector("#project-section");
+    observer.observe(projectsElement);
+
+    return () => {
+      observer.disconnect();
+    }
+  });
 </script>
 
 <style lang="scss">
+  /* On Scroll Animation*/
+  @keyframes scroll-animation {
+    from {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+    }
 
-  /* On Scroll Animation */
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+  }
+
+  .on-scroll {
+    animation-name: scroll-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes unscroll-animation {
+    from {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+    }
+  }
+
+  .on-unscroll {
+    animation-name: unscroll-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  /* OLD On Scroll Animation */
   .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -158,7 +232,7 @@
 
 <!--Title/Logo-->
 <div class="center-container">
-  <div class="logo">
+  <div class="logo" class:on-scroll={elementsVisible.includes('logo s-y_bCXRrkrYfP')}>
     <img src={JatoMixoLogo} alt="Didn't load correctly"/>
     <h1>JatoMixo</h1>
   </div>
@@ -184,12 +258,12 @@
 
       {#if windowWidth <= SMALL_SCREEN_WIDTH && windowWidth >= 320}
         <div id="social-media-about">
-          <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub" class="mobile-social-media"/>
-          <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter" class="mobile-social-media"/>
+          <SocialMedia link="https://github.com/JatoMixo" image={GithubLinkLogo} image_alt="GitHub"/>
+          <SocialMedia link="https://twitter.com/JatoMixo_Gamer" image={TwitterLogo} image_alt="Twitter"/>
         </div>
       {/if}
     </div>
-    <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a <span class="green-flash">High School student</span> who loves <span class="yellow-flash">programming</span> stuff.</p>
+    <p>Hello! I'm <span class="blue-flash">JatoMixo</span>, a <span class="green-flash">High-School student</span> who loves <span class="yellow-flash">programming</span> stuff.</p>
 
     <p>Right now (2023), I'm 15 years old and I started coding small games on <span class="cyan-flash">Unity</span> back when I was 13.
       From that point, I started learning and looking into several programming areas like <span class="dark-green-flash">Web Development</span> or <span class="purple-flash">Low-Level Systems Programming</span>. 
@@ -209,16 +283,16 @@
     <ToolCard image={SvelteLogo} name="Svelte" description="This website was made using Svelte! It was my first time using a JS framework and the result isn't that bad... or is it?"/>
   </div> 
   <div class="toolcard">
-    <ToolCard image={PythonLogo} name="Python" description="I have worked with Python and Raspberry Pi's in the past to make some automatas and they haven't failed yet, so that's a win." class="toolcard"/>
+    <ToolCard image={PythonLogo} name="Python" description="I have worked with Python and Raspberry Pi's in the past to make some automatas and they haven't failed yet, so that's a win."/>
   </div>
   <div class="toolcard">
-    <ToolCard image={RustLogo} name="Rust" description="I'm learning Rust with the Rust Book made by O'Reilly and I'm also doing some projects with ESP32S2s to learn Embedded Rust." class="toolcard"/>
+    <ToolCard image={RustLogo} name="Rust" description="I'm learning Rust with the Rust Book made by O'Reilly and I'm also doing some projects with ESP32S2s to learn Embedded Rust."/>
   </div>
   <div class="toolcard">
-    <ToolCard image={UnityLogo} name="Unity" description="Making games was the first thing I wanted to do, and so, I learnt Unity before anything else." class="toolcard"/>
+    <ToolCard image={UnityLogo} name="Unity" description="Making games was the first thing I wanted to do, and so, I learnt Unity before anything else."/>
   </div>
   <div class="toolcard">
-    <ToolCard image={LinuxLogo} name="Linux" description="In 2022, I started learning about Linux and I have some experience personalizing Debian-based distros. Also, I use Kali Linux." class="toolcard"/>
+    <ToolCard image={LinuxLogo} name="Linux" description="In 2022, I started learning about Linux and I have some experience personalizing Debian-based distros. Also, I use Kali Linux."/>
   </div>
 </div>
 
@@ -227,7 +301,8 @@
 <div id="project-section">
   <Project title="My Website" description="The website you're currently watching" tool={SvelteLogo} github="https://github.com/JatoMixo/PortfolioWebsite"/>
   <Project title="AOC 2022" description="The problems I solved from Advent Of Code 2022" tool={PythonLogo} github="https://github.com/JatoMixo/AdventOfCode2022"/>
-  <Project title="Text Encrypter" description="Encrypt or decrypt text in 5 ways" tool={PythonLogo} github="https://github.com/JatoMixo/PythonEncrypter"/>
+  <Project title="Text Encrypter" description="Encrypt or decrypt text in 5 different ways" tool={PythonLogo} github="https://github.com/JatoMixo/PythonEncrypter"/>
   <Project title="WH-Automata" description="An automata for the water heater in my house" tool={PythonLogo} github="https://github.com/JatoMixo/Automata-Calentador"/>
   <Project title="Polynominal Calc" description="Unfinished program for polynominal operations" tool={CppLogo} github="https://github.com/JatoMixo/PolynominalCalculator"/>
+  <Project title="Keypad Controller" description="Rust Code to control a Keypad with ESP32S2" tool={RustLogo} github="https://github.com/JatoMixo/keypad-aindustriosa"/>
 </div>
