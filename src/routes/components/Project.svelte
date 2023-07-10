@@ -60,6 +60,8 @@
         height: calc(50px + 1.5dvw);
 
         vertical-align: middle;
+
+        margin-top: 10px;
     }
 
     #github-link {
@@ -82,12 +84,6 @@
         justify-content: center;
 
         gap: 20px;
-    }
-
-    #github-logo {
-        vertical-align: middle;
-
-        margin-top: 10px;
     }
 
     hr {
