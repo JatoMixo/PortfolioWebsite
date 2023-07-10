@@ -21,21 +21,21 @@ There are several built-in components I have made for the website which include:
 Used to show data about the tools I use
 
 ```html
-<ToolCard image={IMPORTED_IMAGE_FROM_SCRIPT_TAG} name={NAME_OF_THE_TOOL} description={DESCRIPTION_OF_TOOL}>
+<ToolCard image={IMPORTED_IMAGE_FROM_SCRIPT_TAG} name={NAME_OF_THE_TOOL} description={DESCRIPTION_OF_TOOL}/>
 ```
 
 ### Project
 Used to show data about a project I have made
 
 ```html
-<Project name={NAME_OF_PROJECT} description={DESCRIPTION_OF_PROJECT} github={GITHUB_LINK_OF_PROJECT} tool={IMAGE_CONTAINED_LOGO_OF_TOOL_USED}>
+<Project name={NAME_OF_PROJECT} description={DESCRIPTION_OF_PROJECT} github={GITHUB_LINK_OF_PROJECT} tool={IMAGE_CONTAINED_LOGO_OF_TOOL_USED}/>
 ```
 
 ### Social Media
 Used to show the logo of a social media app like twitter with a link to my account.
 
 ```html
-<SocialMedia link={LINK_TO_ACCOUNT} image={LOGO_FOR_SOCIAL_MEDIA} image_alt={ALT_PROPERTY_FOR_IMAGE}>
+<SocialMedia link={LINK_TO_ACCOUNT} image={LOGO_FOR_SOCIAL_MEDIA} image_alt={ALT_PROPERTY_FOR_IMAGE}/>
 ```
 
 ### Question Box (Deprecated)
@@ -43,7 +43,7 @@ A Question Box inspired from old Point-And-Click adventures like The Secret Of M
 With this, users can ask questions and receive an answer.
 
 ```html
-<QuestionBox>
+<QuestionBox/>
 ```
 
 To edit the questions and answers, go to `/src/routes/components/QuestionBox.svelte` and change the `questions` dictionary following the next schema:
@@ -56,6 +56,10 @@ const questions = {
 
 ### Terminal (Deprecated)
 Working terminal
+
+```html
+<Terminal/>
+```
 
 To edit the commands go to `/src/routes/components/Terminal.svelte` and change the  `Command().getResult()` function adding a new if statement for the command returning an array of the strings with the lines you want to print.
 
