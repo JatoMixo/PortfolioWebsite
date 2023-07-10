@@ -7,7 +7,6 @@
   // Images
   import JatoMixoLogo from "./images/jatomixo/jatomixo_logo.png";
   import JatoMixoLogoCircle from "./images/jatomixo/jatomixo_circle.png";
-  import GithubLogo from "./images/tech/GithubLogo.png";
   import SvelteLogo from "./images/tech/SvelteLogo.png"
   import CSLogo from "./images/tech/CSLogo.png"
   import CppLogo from "./images/tech/CppLogo.png";
