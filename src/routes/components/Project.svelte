@@ -68,22 +68,17 @@
         width: 100%;
         height: 100%;
 
-        align-content: center;
+        display: flex;
+
+        justify-content: center;
         vertical-align: middle;
+
+        gap: 20px;
 
         color: whitesmoke;
         text-decoration: none;
 
         font-size: calc(15px + 0.3dvw);
-    }
-
-    #link-elements {
-        display: flex;
-        vertical-align: middle;
-
-        justify-content: center;
-
-        gap: 20px;
     }
 
     hr {
@@ -105,9 +100,7 @@
     <hr>
 
     <a href={github} target="_blank" id="github-link">
-        <div id="link-elements">
-            <img src={GithubLogo} alt="" id="github-logo"/>
-            <h1 id="github-text">GitHub</h1>
-        </div>
+        <img src={GithubLogo} alt="" id="github-logo"/>
+        <h1 id="github-text">GitHub</h1>
     </a>
 </div>

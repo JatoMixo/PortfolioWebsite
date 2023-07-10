@@ -33,11 +33,11 @@
       entries.forEach((entrie) => {
         if (entrie.isIntersecting) {
           elementsVisible.push(entrie.target.id);
-          elementsVisible = elementsVisible;
         } else {
           elementsVisible.pop(entrie.target.id);
-          elementsVisible = elementsVisible;
         }
+
+        elementsVisible = elementsVisible;
       });
     });
 
