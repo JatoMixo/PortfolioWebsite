@@ -10,7 +10,6 @@
   import SvelteLogo from "./images/tech/SvelteLogo.png"
   import CSLogo from "./images/tech/CSLogo.png"
   import CppLogo from "./images/tech/CppLogo.png";
-  import UnityLogo from "./images/tech/UnityLogo.png"
   import PythonLogo from "./images/tech/PythonLogo.png";
   import RustLogo from "./images/tech/RustLogo.png";
   import LinuxLogo from "./images/tech/LinuxLogo.png";
